@@ -1,0 +1,17 @@
+:root {
+  --primary-bg: #002F6C;
+  --secodary-bg: #ffff;
+  --white-text-color: #fff;
+  --blue-text-color: #002F6C;
+  --light-blue-text-color: #01579B;
+  --hover-bg: #01579B;
+  --hover-text-color: #01579B;
+}
+
+.hero-page-section::before {
+  background-image: url('../images/hero-services2.jpg');
+}
+
+.service-title {
+  margin-bottom: 40px;
+}

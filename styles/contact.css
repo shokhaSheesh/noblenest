@@ -1,0 +1,147 @@
+:root {
+  --primary-bg: #002F6C;
+  --secodary-bg: #ffff;
+  --white-text-color: #fff;
+  --blue-text-color: #002F6C;
+  --light-blue-text-color: #01579B;
+  --hover-bg: #01579B;
+  --hover-text-color: #01579B;
+  --blue-border: #002F6C;
+}
+
+.hero-page-section::before {
+  background-image: url('../images/contactus-banner.jpg');
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form-container {
+  width: 60%;
+  border: 2px solid var(--blue-border);
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.form-container h1 {
+  color: var(--blue-text-color);
+  margin: 0 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input {
+  flex: 1;
+  padding: 10px 15px;
+  margin: 10px;
+  border: 2px solid var(--blue-border);
+  border-radius: 10px;
+  color: var(--blue-text-color);
+}
+
+input::placeholder {
+  color: var(--blue-text-color);
+}
+
+textarea {
+  padding: 10px 15px;
+  resize: none;
+  margin: 10px;
+  border: 2px solid var(--blue-border);
+  border-radius: 15px;
+}
+
+textarea::placeholder {
+  color: var(--blue-text-color);
+}
+
+.form-msg {
+  display: none;
+  padding: 10px 15px;
+}
+
+button {
+  color: var(--white-text-color);
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.contact-container {
+  width: 35%;
+  background: var(--primary-bg);
+  color: var(--white-text-color);
+  padding: 2% 4%;
+  border-radius: 20px;
+}
+
+.contact-l i,
+.contact-p i,
+.contact-e i {
+  margin-right: 7%;
+}
+
+.contact-l,
+.contact-p,
+.contact-e {
+  display: flex;
+  align-items: center;
+}
+
+.contact-p,
+.contact-e {
+  margin-top: 10%;
+}
+
+@media (max-width: 900px) {
+  .form-container {
+    width: 55%;
+  }
+
+  .contact-container {
+    width: 40%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    flex-direction: column;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  form div {
+    flex-direction: column;
+  }
+
+  input  {
+    width: 100%;
+  }
+
+  .contact-container {
+    width: 100%;
+    margin-top: 20px;
+    padding: 4% 8%;
+  }
+
+  textarea {
+    margin: 10px 0;
+  }
+
+  button {
+    margin: 0;
+  }
+}

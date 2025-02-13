@@ -1,0 +1,133 @@
+:root {
+  --primary-bg: #002F6C;
+  --secodary-bg: #ffff;
+  --white-text-color: #fff;
+  --blue-text-color: #002F6C;
+  --light-blue-text-color: #01579B;
+  --hover-bg: #01579B;
+  --hover-text-color: #01579B;
+}
+
+.hero-page-section::before {
+  background-image: url('../images/about-hero-img.webp');
+}
+
+/*ABOUT SECTION*/
+
+.about-seciton {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: var(--blue-text-color);
+}
+
+.about-2 {
+  width: 45%;
+}
+
+.about-2 h1 {
+  margin-bottom: 20px;
+}
+
+.about-2 p {
+  margin-bottom: 10px;
+}
+
+.about-1 {
+  width: 50%;
+  height: 375px;
+  background-image: url('../images/buildin-img.jpg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 1s;
+}
+
+.about-1.animated {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+/* HIGHLIGHT SECTION */
+
+.highlight-section {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: var(--white-text-color);
+}
+
+.highlight-section::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: url('../images/construction-instrumnet.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.5);
+  position: absolute;
+  left: 0;
+}
+
+.highlight {
+  width: 90%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.highlight div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quantity {
+  margin: 10px 0;
+  opacity: 0;
+  transition: all 1s;
+}
+
+.quantity.animated {
+  opacity: 1; 
+}
+
+@media (max-width: 900px) {
+  .about-1 {
+    height: 400px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-seciton {
+    flex-direction: column;
+  }
+
+  .about-1, .about-2 {
+    width: 100%;
+  }
+
+  .about-1 {
+    height: 250px;
+    transform: translateX(-80%);
+    margin-top: 20px;
+  }
+
+  .highlight-section {
+    height: 250px;
+    justify-content: center;
+  }
+
+  .highlight {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .highlight div {
+    margin-top: 15px;
+  }
+}
